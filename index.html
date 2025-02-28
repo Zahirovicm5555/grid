@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galerija</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 0;
+      }
+
+      .main {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        padding: 10px;
+        height: 70%;
+        overflow: hidden;
+      }
+
+      .card {
+        position: relative;
+        background: lightskyblue;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: center;
+        height: 120px;
+        align-items: end;
+      }
+
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .naziv {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: white;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        display: grid;
+        padding: 5px 0;
+        align-items: stretch;
+        box-sizing: border-box;
+        text-align: center;
+      }
+
+      .description {
+        color: #555;
+        font-size: 12px; /* Manja veličina opisa */
+        padding: 10px;
+        text-align: justify;
+      }
+      @media (max-width: 768px) {
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 10px;
+          height: 70%;
+          overflow: hidden;
+          padding: 10px;
+        }
+        .card {
+          width: 80%;
+          max-width: 300px;
+          height: auto;
+        }
+      }
+      @media (max-width: 480px) {
+        .gallery {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .card {
+          width: 100%;
+          max-width: 400px; /* Ograničava maksimalnu širinu slike */
+          height: 250px; /* Fiksna visina da slike ne budu premale */
+        }
+        .card img {
+          width: 100%;
+          height: 100%; /* Održava visinu */
+          object-fit: cover; /* Osigurava da slika ispuni karticu bez gubitka proporcija */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h2>Gallery Heading</h2>
+      <div class="gallery">
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+        <div class="card">
+          <img src="placeholder-image.png" alt="Image title" />
+          <div class="naziv">Image Title</div>
+        </div>
+      </div>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a lacinia
+        nisi, nec tristique sem. Cras id tellus ac mauris posuere varius.
+        Pellentesque vel mi justo. Aenean malesuada purus eu lacinia finibus.
+        Praesent commodo euismod odio, eu pharetra nulla dignissim nec. Ut id
+        nulla augue. Duis ultricies euismod purus, ut lobortis tortor semper a.
+        Nam eleifend accumsan elit, in ullamcorper lacus. Nunc varius imperdiet
+        nisl, eget pretium augue molestie a. Nullam ut malesuada enim. Integer
+        non velit fringilla, porta ex vitae, porttitor velit. Ut luctus lacinia
+        libero a scelerisque. Ut ullamcorper arcu at mauris ullamcorper tempor.
+      </p>
+    </div>
+  </body>
+</html>
